@@ -1,7 +1,7 @@
 # ParticleSimulator
 A small project to create a simulator for particle physics.
 
-## Order of development
+## Order of Development
 1. Created system that emitted particles from a given point, with a certain gravity
 2. Made the system movable by mouse input (i.e. system can be clicked and dragged
 3. Refactored existing code
@@ -11,6 +11,6 @@ A small project to create a simulator for particle physics.
 7. Refactored
 8. Cleaned up display of existing features
 
-## Todo
+## To-Do
 1. Allow creation/deletion of systems/forces during runtime
 2. Add more customizable features (color, size/shape, etc.)
