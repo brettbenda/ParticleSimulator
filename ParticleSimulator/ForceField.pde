@@ -4,4 +4,8 @@ class ForceField{
   
   //all will take in a point to return a velocity value
   Point getVelocity(Point point){ return velocity; }
+  
+  void show(){};
+  
+  boolean isRightClicked(){ return false; }
 }

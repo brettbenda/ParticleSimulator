@@ -27,7 +27,7 @@ class RadialField extends ForceField {
 
   void show() {
     //if is clicked, move to mouse 
-    if (isClicked()) {
+    if (isLeftClicked()) {
       isMoving = true;
     }
     if(!mousePressed){
@@ -47,8 +47,15 @@ class RadialField extends ForceField {
     text("R\n" + mag, center.getX(), center.getY());
   }
 
-  boolean isClicked() {
-    if (isOver() && mousePressed) {
+  boolean isLeftClicked() {
+    if (isOver() && mousePressed && mouseButton == LEFT) {
+      return true;
+    }
+    return false;
+  }
+  
+  boolean isRightClicked() {
+    if (isOver() && mousePressed && mouseButton == RIGHT) {
       return true;
     }
     return false;

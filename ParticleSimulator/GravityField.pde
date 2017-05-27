@@ -32,6 +32,7 @@ class GravityField extends ForceField{
   
   //display details in top corner
   void show(){
+   fill(0);
    textAlign(CENTER);
    //displays value in top right corner
    text("G: " + mag + " " + dir,50,25);

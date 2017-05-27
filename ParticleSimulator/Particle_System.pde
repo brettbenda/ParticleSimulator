@@ -43,7 +43,7 @@ class ParticleSystem{
  
  //updates info for all particles, and location of emitter if it is clicked
  void update(){
-    if (isClicked()) {
+    if (isLeftClicked()) {
       isMoving = true;
     }
     if(!mousePressed){
@@ -63,12 +63,19 @@ class ParticleSystem{
    }
  }
  
- boolean isClicked(){
-  if(isOver() && mousePressed){
+ boolean isLeftClicked(){
+  if(isOver() && mousePressed && mouseButton == LEFT){
    return true; 
   }
   return false;
  }
+ 
+ boolean isRightClicked() {
+    if (isOver() && mousePressed && mouseButton == RIGHT) {
+      return true;
+    }
+    return false;
+  }
  
  boolean isOver(){
   if(dist((float)mouseX,(float)mouseY,center.getX(),center.getY()) < 25){
