@@ -11,8 +11,8 @@ class StringInput {
     this.options = options;
     this.x = x;
     this.y = y;
-    this.left = new Button(x-50, y, 25, 25, "<");
-    this.right = new Button(x+50, y, 25, 25, ">");
+    this.left = new Button(x-25, y, 25, 25, "<");
+    this.right = new Button(x+25, y, 25, 25, ">");
   }
 
   void show() {
@@ -43,7 +43,7 @@ class StringInput {
     //display data
     left.show();
     right.show();
-    textFont(createFont("Tahoma", 20));
+    textFont(createFont("Tahoma", width/50));
     textAlign(CENTER, CENTER);
     text(options[index], x, y);
     text(name, x, y-height/40);

@@ -5,7 +5,7 @@ boolean buttonHasBeenPressed = false;
 UI ui;
 
 void setup() {
-  size(1000, 1250);
+  size(500, 625);
   background(255);
   textFont(createFont("Tahoma", 10));
 
@@ -26,6 +26,12 @@ void draw() {
   updateForces();
   performClickOperation();
   showEverything();
+}
+
+void keyPressed(){
+  if(key=='p'){
+   save("particle.jpg"); 
+  }
 }
 
 //if a button on the UI has been pressed, we perform the desired action
@@ -58,7 +64,7 @@ void performClickOperation() {
       break;
     case "System":
       buttonHasBeenPressed = true;
-      systems.add(new ParticleSystem(new SystemSettings(new Point(500, 500), 
+      systems.add(new ParticleSystem(new SystemSettings(new Point(width/2, height/2), 
         (int)ui.numberOfParticles.getData(), 
         ui.maxXVel.getData(), 
         ui.minXVel.getData(), 

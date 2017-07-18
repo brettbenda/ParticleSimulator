@@ -1,7 +1,7 @@
 class UI {
   ArrayList<String> buttonNames = new ArrayList<String>(); //names of the buttons
   ArrayList<Button> buttons = new ArrayList<Button>(); //the button objects to be displayed on the ui
-  String[] directionOptions = {"UP", "DOWN", "LEFT", "RIGHT"}; //options for gravity direction
+  String[] directionOptions = {"DOWN", "UP", "LEFT", "RIGHT"}; //options for gravity direction
   String[] particleTypeOptions = {"CIRCLE", "LINE"}; //options for particle types
 
   //the fields we need for generating gravity fields

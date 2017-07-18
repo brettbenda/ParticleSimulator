@@ -12,8 +12,8 @@ class DataInput {
     this.y = y;
     this.upperBound = upperBound;
     this.lowerBound = lowerBound;
-    this.lower = new Button(x-50,y,25,25,"-");
-    this.upper = new Button(x+50,y,25,25,"+");
+    this.lower = new Button(x-25,y,12.5,12.5,"-");
+    this.upper = new Button(x+25,y,12.5,12.5,"+");
     this.increment = increment;
   }
   
@@ -37,7 +37,7 @@ class DataInput {
    //display data
    lower.show();
    upper.show();
-   textFont(createFont("Tahoma", 20));
+   textFont(createFont("Tahoma", width/50));
    textAlign(CENTER,CENTER);
    if(data%1==0){
      text((int)data,x,y);
